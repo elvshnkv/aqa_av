@@ -31,9 +31,9 @@ console.log('The sum of Andrews throws is '+ andrewSumOfThrows);
 function calculateTheWinnerAmount(andrewAmount, billAmount){
     if (andrewAmount === billAmount){
         console.log("We have the draw!")
-    } if (andrewAmount>billAmount) {
+    } else if (andrewAmount>billAmount) {
         console.log('Andrew is the winner!')
-    } if (billAmount > andrewAmount){
+    } else if (billAmount > andrewAmount){
         console.log('Bill is the winner!')
     }
 }
