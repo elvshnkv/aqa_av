@@ -69,16 +69,16 @@ function checkPositionAndValueMatch(number1, number2){
 checkPositionAndValueMatch(3487,3794);
 
 //удалить из массива все повторяющиеся элементы
-function removeDuplicates (arr){
+
+function removeDuplicates(arr){
+    let arr2 = [];
     for (i=0; i < arr.length; i++){
-        identifier = arr.includes(arr[i], i+1);
-        if (identifier === true){
-            delete arr[i];
+        if(arr2.includes(arr[i]) === false){
+            arr2.push(arr[i]);
         }
     }
-    console.log('Повторяющиеся и пустые значения удалены: ' + arr.filter(element => element !== null));
+    console.log('Повторяющиеся и пустые значения удалены: ' + arr2);
 }
-removeDuplicates(arr);
 removeDuplicates(arr2);
 
 
