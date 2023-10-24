@@ -33,3 +33,31 @@ function sortArray(arr) {
 const arr2 = [3, 4, 1, 2, 7, 30, 50];
 const sortedArr = sortArray(arr2);
 console.log(sortedArr);
+
+function insertData(arr, index, insertedArr) {
+    arr.splice(index, 0, ...insertedArr);
+    return arr;
+}
+const originalArray = [1, 2, 3, 4, 5];
+const insertedArr = ['a', 'b', 'c'];
+const newArray = insertData(originalArray, 3, insertedArr);
+console.log(newArray);
+
+function mixedArrays(arr1, arr2) {
+    const result = [];
+    const maxLength = Math.max(arr1.length, arr2.length);
+    for (let i = 0; i < maxLength; i++) {
+        if (i < arr1.length) {
+            result.push(arr1[i]);
+        }
+        if (i < arr2.length) {
+            result.push(arr2[i]);
+        }
+    }
+
+    return result;
+}
+const numArr = [1, 3, 5, 6, 8, 9, 7, 6];
+const strArr = ['a', 'b', 'c','d', 'e'];
+const resultOfMixArray = mixedArrays(numArr, strArr);
+console.log(resultOfMixArray);
