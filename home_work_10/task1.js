@@ -7,16 +7,17 @@ function getRandomPromise(num) {
     });
 }
 
-const promises = [
+const promisesSet = [
     getRandomPromise(1),
     getRandomPromise(2),
     getRandomPromise(3)
 ];
 
-Promise.race(promises)
+Promise.race(promisesSet)
     .then(result => {
         console.log("Первый выполненный промис:", result);
     })
     .catch(error => {
         console.error("Произошла ошибка:", error);
     });
+
