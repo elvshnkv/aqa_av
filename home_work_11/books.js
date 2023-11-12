@@ -1,4 +1,4 @@
-const Item = require('./Item');
+const Item = require('./items');
 
 class Book extends Item {
     constructor(title, author, year, genre) {

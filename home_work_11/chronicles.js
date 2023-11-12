@@ -1,8 +1,8 @@
-const Item = require('./Item');
+const Item = require('./items');
 
 class Chronicle extends Item {
-    constructor(title, events) {
-        super(title);
+    constructor(title, events, year) {
+        super(title, year);
         this.events = events;
     }
 
